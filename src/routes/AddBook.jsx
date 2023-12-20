@@ -59,8 +59,7 @@ function AddBook() {
   // send the input after form submitted
   function postHandler(e) {
     e.preventDefault();
-    const bookWithImage = book.img.trim() === '' ? { ...book, img: "/src/assets/book.png" } : book;
-    post('books', bookWithImage);
+    post('books', book);
   }
 
   return (
